@@ -1,0 +1,5 @@
+{
+  "name": "SmartTask AI",
+  "description": "A sophisticated todo application with a dual-backend system: a standard Mock storage and an AI-powered 'Real' backend using Gemini for smart categorization and task optimization.",
+  "requestFramePermissions": []
+}
