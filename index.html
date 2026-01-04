@@ -8,21 +8,11 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       // Prevent FOUC (Flash of Unstyled Content) by checking theme early
+      // This runtime script stays here to ensure the theme is applied before React renders
       if (localStorage.getItem('smarttask_theme') === 'dark' || (!('smarttask_theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
         document.documentElement.classList.add('dark');
       } else {
         document.documentElement.classList.remove('dark');
-      }
-
-      tailwind.config = {
-        darkMode: 'class',
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ['Inter', 'sans-serif'],
-            },
-          },
-        },
       }
     </script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
